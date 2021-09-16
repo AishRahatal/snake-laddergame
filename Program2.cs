@@ -58,7 +58,7 @@ namespace snake_ladder
 
                 player2.currentposition = b.nextposition(score, player2.previousposition);
                 if (player2.currentposition > 100)
-                    player2.currentposition = player1.previousposition;
+                    player2.currentposition = player2.previousposition;
                 Console.WriteLine(" Player2 : "+player2.name);
                 Console.WriteLine("Previous Position :\t" + player2.previousposition);
                 Console.WriteLine("\nDice score     :\t" + score);
