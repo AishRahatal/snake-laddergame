@@ -10,7 +10,7 @@ namespace snake_ladder
        public int currentposition;
        public int previousposition;
        
-  
+  // UC1-starting player at 0 position 
   public player()		// constructor implementation. 
 {
             name = "";
@@ -19,7 +19,7 @@ namespace snake_ladder
 
 }
         
-
+//UC2- random funtion to get 0 to 6 number
 public int Rolling_dice()        // Rollingdie function.
 {
             Random random = new Random();
