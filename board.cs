@@ -4,7 +4,7 @@ using System.Text;
 
 namespace snake_ladder
 {
-
+    // UC3- In case of ladder player moves to next position and in case of snake moves back 
     class board         // board class.
     {
 
@@ -28,7 +28,7 @@ namespace snake_ladder
                     Console.WriteLine("Woww!! You Got Ladder at position at 66 goes up to 87 ");
                     return 87;
                     break;
-                // creating snakes
+                // creating snakes 24 55 71 88 99 
                 case 24:
                     Console.WriteLine("oh! noo :( You Got Snake at position 24 goes down to position 1");
                     return 1;
@@ -50,7 +50,7 @@ namespace snake_ladder
                     return 6;
                     break;
                 default:
-                    return (a + b);
+                    return (a + b); // returning next position if there is no ladder or snake encounter
                     break;
             }
 
