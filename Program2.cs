@@ -6,9 +6,9 @@ namespace snake_ladder
     class Program
     {
 
+      //UC7-Play the game with 2 Players.
 
-
- public static int Main(String[] args)
+   public static int Main(String[] args)
    {
 
             board b = new board(); 
@@ -31,16 +31,20 @@ namespace snake_ladder
 
             Console.WriteLine( "***********************Dice score***********************\n");
             int score;
+            int count1 = 0, count2 = 0;
+
             while (true)
             {
                 // player1 
                 player1.previousposition = player1.currentposition;
                 score = player1.Rolling_dice();   // calling Rolling_dice function. 
-
+                 count1++;
                 player1.currentposition = b.nextposition(score, player1.previousposition);
                 if (player1.currentposition > 100)
                    player1.currentposition = player1.previousposition;
-                Console.WriteLine(" Player1 : "+player1.name);
+                
+               // UC6-Report the number of times the dice was played to win the game and also the position after every die role
+                Console.WriteLine(" Player1 : "+player1.name + "\t||  No of time dice roll :"+count1);
                 Console.WriteLine("Previous Position :\t" + player1.previousposition);
                 Console.WriteLine(  "\nDice score     :\t"+score  );
                 Console.WriteLine("\nCurrent Position :\t" + player1.currentposition);
@@ -55,11 +59,13 @@ namespace snake_ladder
                 // player2 
                 player2.previousposition = player2.currentposition;
                 score = player2.Rolling_dice();   // calling Rolling_dice function. 
-
+                  count2++;
                 player2.currentposition = b.nextposition(score, player2.previousposition);
                 if (player2.currentposition > 100)
                     player2.currentposition = player2.previousposition;
-                Console.WriteLine(" Player2 : "+player2.name);
+                
+                // UC6-Report the number of times the dice was played to win the game and also the position after every die role
+                Console.WriteLine(" Player2 : " + player2.name + "\t||  No of time dice roll :" + count2);
                 Console.WriteLine("Previous Position :\t" + player2.previousposition);
                 Console.WriteLine("\nDice score     :\t" + score);
                 Console.WriteLine("\nCurrent Position :\t" + player2.currentposition);
